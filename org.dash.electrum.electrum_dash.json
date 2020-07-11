@@ -23,19 +23,15 @@
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
-        "python3-modules.json",
-        "python3-pycryptodomex.json",
-        "python3-pyQt5.json",
-        "python3-cython.json",
-        "python3-hidapi.json",
-        "python3-trezor_agent.json",
+        "python3-requirements-binaries.json",
+        "python3-requirements.json",
+        "python3-requirements-hw.json",
         "python3-x11-hash.json",
-        "python3-bls.json",
         {
             "name": "electrum-dash",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[fast]",
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
                 "install -Dp -m 644 org.dash.electrum.electrum_dash.metainfo.xml /app/share/metainfo/org.dash.electrum.electrum_dash.metainfo.xml",
                 "install -Dp -m 644 electrum_dash/gui/icons/electrum-dash.png /app/share/icons/hicolor/128x128/apps/electrum-dash.png"
             ],
