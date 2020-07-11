@@ -85,6 +85,36 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2020-07-10" version="3.3.8.6">
+      <description>
+        <p>2020-07-10 release:</p>
+        <ul>
+          <li>
+            PrivateSend: allow start mixing before llmq/protx ready,
+            stop mixing only if keep amount is available on ps balance
+          </li>
+          <li>
+            Enhance "Detect Tor proxy on wallet startup" option behaviour/UI
+          </li>
+          <li>
+            DIP3 masternodes: support collateral in ProRegTx output (p2sh
+            addresses support), other fixes
+          </li>
+          <li>
+            Remove legacy masternodes commands from commands.py
+          </li>
+          <li>
+            Add UI to handle Other PS coins
+          </li>
+          <li>
+            Add separate ps_keystore for PrivateSend operation
+          </li>
+          <li>
+            Other fixes
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-05-15" version="3.3.8.5">
       <description>
         <p>2020-05-15 bug-fixes release:</p>
