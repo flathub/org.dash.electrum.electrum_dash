@@ -85,6 +85,40 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2020-08-24" version="3.3.8.7">
+      <description>
+        <p>2020-08-24 release:</p>
+        <ul>
+          <li>
+            PrivateSend: support mixing on hardware wallets
+            (using ps_keystore)
+          </li>
+          <li>
+            PrivateSend: indicate waiting state (all mixed,
+            wait for more funds)
+          </li>
+          <li>
+            qt: fix exported files file mode
+          </li>
+          <li>
+            qt: allow hide warning for watch-only wallet
+          </li>
+          <li>
+            add "pay:" scheme to support anypayinc.com
+          </li>
+          <li>
+            allow bypass Tor proxy for Fiat rates loading
+            (option in Proxy settings)
+          </li>
+          <li>
+            protx_list: enhance network data processing
+          </li>
+          <li>
+            other qt gui fixes
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-07-10" version="3.3.8.6">
       <description>
         <p>2020-07-10 release:</p>
