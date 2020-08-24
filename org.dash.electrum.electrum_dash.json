@@ -41,8 +41,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akhavr/electrum-dash/releases/download/3.3.8.6/Dash-Electrum-3.3.8.6.tar.gz",
-                    "sha256": "71d0387a208bc45eeec08a7c779993ff841562613b11f6107f79e540dc1f7282"
+                    "url": "https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz",
+                    "sha256": "b5c2ad070864041b194da9dbbb0d112fa2296d2386abafd2672546d68e9d13d0"
                 },
                 {
                     "type": "patch",
