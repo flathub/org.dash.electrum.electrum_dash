@@ -85,6 +85,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-01-13" version="4.0.9.1">
+      <description>
+        <p>2021-01-13 release:</p>
+        <ul>
+          <li>
+            Fix Transaction.input_script for size estimation (#166)
+          </li>
+          <li>
+            Fix android startup crash (#167)
+          </li>
+          <li>
+            Fix wallet._is_onchain_invoice_paid to prevent deadlocks (#168)
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-08-24" version="3.3.8.7">
       <description>
         <p>2020-08-24 release:</p>

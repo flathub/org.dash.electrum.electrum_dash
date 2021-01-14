@@ -2,27 +2,61 @@
     "id": "org.dash.electrum.electrum_dash",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
-    "rename-icon": "electrum-dash",
-    "rename-desktop-file": "electrum-dash.desktop",
+    "runtime-version": "5.15",
     "command": "electrum-dash",
     "finish-args": [
-        /* Wayland and Xorg support */
-        "--socket=x11",
+        /* Xorg and Wayland support */
         "--socket=wayland",
+        "--socket=fallback-x11",
         /* Sound */
         "--socket=pulseaudio",
         /* Persistent storage */
         "--persist=.electrum-dash",
-        /* OpenGL access. */
-        "--device=dri",
+        /* OpenGL access and QR scanner. */
+        "--device=all",
         "--share=ipc",
         /* Network acess. */
         "--share=network"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/debug",
+        "/share/man/man1"
+    ],
     "modules": [
         "shared-modules/libusb/libusb.json",
         "libsecp256k1.json",
+        {
+          "name": "zbar",
+          "config-opts": [
+            "--without-qt",
+            "--without-qt5",
+            "--without-gtk",
+            "--without-xv",
+            "--without-imagemagick",
+            "--without-dbus",
+            "--without-java",
+            "--without-npapi",
+            "--without-xshm",
+            "--with-python=python3",
+            "--disable-doc",
+            "--enable-codes=qrcode"
+          ],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://git.linuxtv.org/zbar.git",
+              "tag": "0.23.1"
+            },
+            {
+              "type": "script",
+              "dest-filename": "autogen.sh",
+              "commands": [
+                "autoreconf -vfi -W none"
+              ]
+            }
+          ]
+        },
         "python3-requirements-binaries.json",
         "python3-requirements.json",
         "python3-requirements-hw.json",
@@ -31,18 +65,18 @@
             "name": "electrum-dash",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
-                "install -Dp -m 644 org.dash.electrum.electrum_dash.metainfo.xml /app/share/metainfo/org.dash.electrum.electrum_dash.metainfo.xml",
-                "install -Dp -m 644 electrum_dash/gui/icons/electrum-dash.png /app/share/icons/hicolor/128x128/apps/electrum-dash.png"
-            ],
-            "post-install": [
-                "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=electrum-dash --set-key=Icon --set-value=org.dash.electrum.electrum_dash electrum-dash.desktop"
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} .[full]",
+                "install -Dp -m 644 org.dash.electrum.electrum_dash.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -Dp -m 644 electrum_dash/gui/icons/electrum-dash.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png",
+                "install -Dp -m 644 electrum-dash.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Icon\" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=\"Exec\" --set-value=electrum-dash /app/share/applications/${FLATPAK_ID}.desktop"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz",
-                    "sha256": "b5c2ad070864041b194da9dbbb0d112fa2296d2386abafd2672546d68e9d13d0"
+                    "url": "https://github.com/akhavr/electrum-dash/releases/download/4.0.9.1/Dash-Electrum-4.0.9.1.tar.gz",
+                    "sha256": "3ab27bb87dc22b9a988f0682816848f8d7e42837ac0680fb7830f87aa9a845af"
                 },
                 {
                     "type": "patch",
