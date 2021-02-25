@@ -85,6 +85,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-02-25" version="4.0.9.3">
+      <description>
+        <p>2021-02-25 release:</p>
+        <ul>
+          <li>
+            kivy: fix history screen tx_type processing (#207)
+          </li>
+          <li>
+            qt: pass InvoiceExt data to do_pay_invoice (#209)
+          </li>
+          <li>
+            kivy/qt: fix tx_type handling (#210)
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-02-19" version="4.0.9.2">
       <description>
         <p>2021-02-19 release:</p>
