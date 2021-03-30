@@ -75,8 +75,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akhavr/electrum-dash/releases/download/4.0.9.3/Dash-Electrum-4.0.9.3.tar.gz",
-                    "sha256": "b129b65cc0dc31bbe22974f4ba0c8ff1f0c10ad8a739c19b2c5b4c1a4e355142"
+                    "url": "https://github.com/akhavr/electrum-dash/releases/download/4.0.9.4/Dash-Electrum-4.0.9.4.tar.gz",
+                    "sha256": "4ebe6dc46ad3af8bf8e00dbee6516e828e954281cc16bab002f8c57866a6e6f7"
                 },
                 {
                     "type": "patch",
