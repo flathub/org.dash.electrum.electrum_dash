@@ -85,6 +85,43 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-04-06" version="4.0.9.4">
+      <description>
+        <p>2021-04-06 release:</p>
+        <ul>
+          <li>
+            qt: fix do_export_history (#213)
+          </li>
+          <li>
+            couple of qt style fixes (#216)
+          </li>
+          <li>
+            Fix offline command backup old version on wallet upgrade (#217)
+          </li>
+          <li>
+            add support to save uncompleted multisig wallets (#219)
+          </li>
+          <li>
+            installwizard: show hw xpub after adding cosigner (#220)
+          </li>
+          <li>
+            Add plugin scan_over_gap (#221)
+          </li>
+          <li>
+            qt: add show_utxo_time config/qt option (#222)
+          </li>
+          <li>
+            Split dash_ps module (#223)
+          </li>
+          <li>
+            dash_ps: allow set absolute denoms count to mix (#224)
+          </li>
+          <li>
+            fixes for privatesend with hw wallet (#225)
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-02-25" version="4.0.9.3">
       <description>
         <p>2021-02-25 release:</p>
