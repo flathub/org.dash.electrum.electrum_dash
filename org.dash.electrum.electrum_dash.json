@@ -5,9 +5,9 @@
     "runtime-version": "5.15",
     "command": "electrum-dash",
     "finish-args": [
-        /* Xorg and Wayland support */
-        "--socket=wayland",
-        "--socket=fallback-x11",
+        /* Xorg support */
+        "--socket=x11",
+        "--env=QT_QPA_PLATFORM=xcb",
         /* Sound */
         "--socket=pulseaudio",
         /* Persistent storage */
@@ -75,8 +75,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akhavr/electrum-dash/releases/download/4.0.9.4/Dash-Electrum-4.0.9.4.tar.gz",
-                    "sha256": "4ebe6dc46ad3af8bf8e00dbee6516e828e954281cc16bab002f8c57866a6e6f7"
+                    "url": "https://github.com/akhavr/electrum-dash/releases/download/4.1.2.0/Dash-Electrum-4.1.2.0.tar.gz",
+                    "sha256": "8bd9b40a9188f6298003aa150803d07fcf0cb207eff1274f313d68cdc8fbbc0c"
                 },
                 {
                     "type": "patch",
