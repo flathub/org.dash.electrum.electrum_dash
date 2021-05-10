@@ -21,7 +21,7 @@
             "name": "python3-btchip-python",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"btchip-python==0.1.32\""
+                "env C_INCLUDE_PATH=/app/include/libusb-1.0 pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"btchip-python==0.1.32\""
             ],
             "sources": [
                 {
