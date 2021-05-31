@@ -85,6 +85,45 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-05-31" version="4.1.2.1">
+      <description>
+        <p>2021-05-31 release:</p>
+        <ul>
+          <li>
+            base_wizard.py, keystore.py: add purpose48 multisig #244
+          </li>
+          <li>
+            dash_ps: enhance new denoms/collateral patterns #246
+          </li>
+          <li>
+            commands load_wallet: add set current for commands option #247
+          </li>
+          <li>
+            dash_ps: fix _calc_total_need_val #248
+          </li>
+          <li>
+            qt dip3: make wizards modeless #251
+          </li>
+          <li>
+            Fix kivy: show tx type again #252
+          </li>
+          <li>
+            base_wizard.py: fix choose_keystore (create seed) #253
+          </li>
+          <li>
+            kivy: add network data loading progress bar, notify
+            when server disconnected on excessive resource usage (limits) #254
+          </li>
+          <li>
+            Renew build dependencies for macOS/Win, other fixes #255
+          </li>
+          <li>
+            Win builds: custom PyInstaller bootloaders to minimize
+            AV false-positives #256
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-05-10" version="4.1.2.0"/>
     <release date="2021-04-06" version="4.0.9.4">
       <description>
