@@ -85,6 +85,52 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-08-17" version="4.1.5.0">
+      <description>
+        <p>2021-08-17 release:</p>
+        <ul>
+          <li>
+            Kivy/Android: fix paying bip70 invoices (regression) (90579ccf)
+          </li>
+          <li>
+            fix: payment requests not saved if process is killed (6a049d99)
+          </li>
+          <li>
+            Qt: allow restoring from SLIP39 seeds (#6917)
+          </li>
+          <li>
+            Qt: rework QR code scanning on Windows and macOS (#7365)
+          </li>
+          <li>
+            Qt: support smaller window sizes, decrease minimums (#7385)
+          </li>
+          <li>
+            GUIs: add "funded or unused" filter option to Addresses tab (#5823)
+          </li>
+          <li>
+            CLI/RPC: fix "close_wallet" command (#7348)
+          </li>
+          <li>
+            Android: the binaries (APKs) prepared to be reproducible
+          </li>
+          <li>
+            AppImage: fix some startup issues by including libxcb deps (#7198)
+          </li>
+          <li>
+            imported wallets: when enabling the "Use change addresses" option,
+            change will now be sent to a random unused imported address. (#7330)
+            As before, by default, change is sent back to the "from address".
+          </li>
+          <li>
+            seed generation: make sure newly created electrum seeds don't have
+            correct bip39 checksum by chance (#6001)
+          </li>
+          <li>
+            other minor fixes
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-06-25" version="4.1.2.2">
       <description>
         <p>2021-06-25 release:</p>
