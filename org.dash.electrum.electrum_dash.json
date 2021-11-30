@@ -2,7 +2,7 @@
     "id": "org.dash.electrum.electrum_dash",
     "sdk": "org.kde.Sdk",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "command": "electrum-dash",
     "finish-args": [
         /* Xorg support */
