@@ -40,13 +40,15 @@
             "--without-xshm",
             "--with-python=python3",
             "--disable-doc",
-            "--enable-codes=qrcode"
+            "--enable-codes=qrcode",
+            "--with-python_prefix=\"${FLATPAK_DEST}\"",
+            "--with-python_exe_prefix=\"${FLATPAK_DEST}\""
           ],
           "sources": [
             {
               "type": "git",
               "url": "https://git.linuxtv.org/zbar.git",
-              "tag": "0.23.1"
+              "tag": "0.23.92"
             },
             {
               "type": "script",

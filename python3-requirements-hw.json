@@ -585,7 +585,7 @@
             "name": "python3-wheel",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"wheel==0.36.2\""
+                "pip3 install --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"wheel==0.36.2\""
             ],
             "sources": [
                 {
