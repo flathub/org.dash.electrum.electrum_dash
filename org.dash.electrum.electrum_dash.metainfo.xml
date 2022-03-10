@@ -85,6 +85,22 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2022-02-27" version="4.1.5.2">
+      <description>
+        <p>2022-02-27 release, version 4.1.5.2:</p>
+        <ul>
+          <li>
+            sign_releases: build PPA in docker container #333
+          </li>
+          <li>
+            Qt: add option to save local transaction before send #334
+          </li>
+          <li>
+            network: remove tx-txlock-conflict from blacklist errors #335
+          </li>
+        </ul>
+      </description>
+    </release>
     <release date="2022-02-27" version="4.1.5.1">
       <description>
         <p>2022-02-27 release, version 4.1.5.1:</p>
