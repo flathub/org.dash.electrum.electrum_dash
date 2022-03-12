@@ -85,9 +85,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release date="2022-02-27" version="4.1.5.2">
+    <release date="2022-03-07" version="4.1.5.2">
       <description>
-        <p>2022-02-27 release, version 4.1.5.2:</p>
+        <p>2022-03-07 release, version 4.1.5.2:</p>
         <ul>
           <li>
             sign_releases: build PPA in docker container #333
